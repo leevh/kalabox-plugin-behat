@@ -1,0 +1,40 @@
+name: viu-behat
+type: pantheon
+plugins:
+  - kalabox-plugin-pantheon
+  - kalabox-plugin-behat
+pluginconfig:
+  cli: 'on'
+  sharing:
+    share: 'data:/code'
+    ignore:
+      - Name sites/default/files
+  services:
+    web:
+      - port: 80/tcp
+        default: true
+      - port: 443/tcp
+        default: true
+        secure: true
+    edge:
+      - port: 80/tcp
+        hostname: edge
+      - port: 443/tcp
+        hostname: edge
+        secure: true
+  pantheon:
+    site: viu-behat
+    env: dev
+    uuid: f7560c71-66b9-4818-a2fb-6f31726d67c8
+    framework: drupal
+    upstream:
+      url: >-
+        https://pantheon_distributions:tofuscramble@bitbucket.org/viuweb/viupal-drops-7
+      product_id: 51c7b2b8-6c46-44d1-b7a5-4894e5cf9ee4
+      branch: master
+    images: v2.1.2
+    php: 56
+    drush: 8-php5
+    name: Lee vanHalderen
+    email: lee.vanhalderen@viu.ca
+version: 2.1.2

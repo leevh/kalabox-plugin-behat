@@ -1,0 +1,15 @@
+#
+# Behat tooling.
+#
+behat:
+  image: leevh/docker-kalabox-behat:latest
+  volumes:
+    - $KALABOX_APP_ROOT/code:/srv/code
+    - $KALABOX_APP_ROOT/code/behat.yml:/srv/behat.yml
+    - $KALABOX_APP_ROOT/code/features:/srv/features
+    - $KALABOX_APP_ROOT/plugins/kalabox-plugin-behat/settings.php:/srv/code/sites/default/settings.php
+  working_dir: /srv
+  stdin_open: true
+  tty: true
+  links:
+    - db:database

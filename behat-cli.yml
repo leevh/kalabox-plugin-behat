@@ -1,0 +1,8 @@
+#
+# Adds a behat command to your app.
+#
+behat:
+  service: behat
+  entrypoint: /srv/entrypoint.sh
+  description: Run a behat command
+  mapping: <config.sharing.codeDir>:/srv/code
