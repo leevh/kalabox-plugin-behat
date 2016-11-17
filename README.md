@@ -110,3 +110,10 @@ Other Resources
 ---------------
 
 * [Mountain climbing advice](https://www.youtube.com/watch?v=tkBVDh7my9Q)
+
+
+todo
+---------------
+- add more to events.js to move the usermap file to config/behat too
+- also for events.js, if no behat.yml is in place, copy sample so docker can mount something.
+- possibly now remove the entrypoint from the image and make it work more as a standalone
