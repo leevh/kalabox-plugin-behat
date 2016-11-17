@@ -14,7 +14,7 @@
     "url": "https://github.com/leevh/kalabox-plugin-behat.git"
   },
   "bugs": {
-    "url": "https://github.com/leevh/kalabox-plugin-behat.git",
+    "url": "https://github.com/leevh/kalabox-plugin-behat",
     "email": "lee@leevdesigns.com"
   },
   "devDependencies": {
