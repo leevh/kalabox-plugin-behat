@@ -3,6 +3,12 @@
 #
 behat:
   service: behat
-  entrypoint: /srv/entrypoint.sh
+  entrypoint: usermap
   description: Run a behat command
   mapping: <config.sharing.codeDir>:/srv/code
+  environment:
+      HOME: /home/$KALABOX_ENGINE_ID
+      KALABOX_GID: $KALABOX_ENGINE_GID
+      KALABOX_UID: $KALABOX_ENGINE_ID
+      KALABOX_SSH_KEY: pantheon.kalabox.id_rsa
+      PANTHEON_BINDING: $KALABOX_APP_PANTHEON_PANTHEON_BINDING
