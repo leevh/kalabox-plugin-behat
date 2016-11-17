@@ -30,7 +30,7 @@ script:
   # Run code tests
   - grunt test:code
 
-  # Pull down a pantheon site so we can test out wraith
+  # Pull down a pantheon site so we can test out behat
   - mkdir -p ~/apps
   - cd ~/apps
   - kbox create pantheon -- --token=$PANTHEON_TOKEN --site=viu-behat --env=dev --name=viu-behat -d
