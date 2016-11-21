@@ -3,7 +3,7 @@
 #
 behat:
   service: behat
-  entrypoint: usermap
+  entrypoint: /usr/local/bin/usermap
   description: Run a behat command
   mapping: <config.sharing.codeDir>:/srv/code
   environment:
