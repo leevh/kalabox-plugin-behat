@@ -8,7 +8,7 @@ behat:
     - $KALABOX_APP_ROOT/code/behat.yml:/srv/behat.yml
     - $KALABOX_APP_ROOT/code/features:/srv/features
     - $KALABOX_APP_ROOT/config/behat/settings.php:/srv/code/sites/default/settings.php
-    - $KALABOX_APP_ROOT/plugins/kalabox-plugin-behat/usermap.sh:/usr/local/bin/usermap
+    - $KALABOX_APP_ROOT/config/behat/usermap.sh:/usr/local/bin/usermap
   working_dir: /srv
   stdin_open: true
   tty: true
