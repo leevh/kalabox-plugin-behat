@@ -42,11 +42,12 @@ script:
   - cp -f "$TRAVIS_BUILD_DIR/test/kalabox.yml" kalabox.yml
   - sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
   - sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
+  - cd plugins/kalabox-plugin-behat
+  - npm install
   - kbox restart -- -d
 
   # Do the behat setup and then copy our prefap config file over
   # todo behat specific commands here
-  #- kbox behat --init
   #- sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
   #- sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
   - kbox behat -dl
