@@ -43,18 +43,11 @@ script:
   - sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
   - sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
   - cd plugins/kalabox-plugin-behat
-  - npm install
-  - kbox restart -- -d
+#  - kbox restart -- -d
+  # Test Behat
+#  - kbox behat -dl
+#  - kbox behat -v
 
-  # Do the behat setup and then copy our prefap config file over
-  # todo behat specific commands here
-  #- sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
-  #- sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
-  - kbox behat -dl
-  - kbox behat -v
-
-  # Run a basic capture
-  #- kbox behat capture configs/capture.yaml
 
   # Do some cleanup
   - SSH_KEY_FINGERPRINT=$(ssh-keygen -l -f ~/.kalabox/pantheon/keys/pantheon.kalabox.id_rsa.pub | awk -F' ' '{print $2}' | sed 's/://g')
