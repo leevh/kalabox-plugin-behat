@@ -47,7 +47,6 @@ script:
   - kbox behat -dl
   - kbox behat -v
 
-
   # Do some cleanup
   - SSH_KEY_FINGERPRINT=$(ssh-keygen -l -f ~/.kalabox/pantheon/keys/pantheon.kalabox.id_rsa.pub | awk -F' ' '{print $2}' | sed 's/://g')
   - kbox terminus ssh-keys delete --fingerprint=$SSH_KEY_FINGERPRINT --yes
