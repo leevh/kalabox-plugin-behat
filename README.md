@@ -38,30 +38,10 @@ Restart your app. This will download and build any needed Docker images provided
 kbox restart -- -d
 ```
 
-Using Behat
-------------
-
-You will want to confer with the [Behat documentation](http://behat.org/en/latest/) and [Drupal Behat Extension](https://behat-drupal-extension.readthedocs.io) on the various commands you can run with Behat. Here is how you invoke  `Behat` commands via Kalabox.
-
-`kbox behat <behat arguments>`
-
-```
-Options:
-  -h, --help     Display help message.                                   
-  -v, --verbose  Use verbose output.                                     
-```
-
-
 Configuring Behat
 ------------------
 
-`kbox behat --init`
-
-This will generate the Behat features folder FeatureContext.php file, as outlined on [Drupal Behat Extension](https://behat-drupal-extension.readthedocs.io).
-
-You will need to create a behat.yml file as noted on the link above as well.  You can either start with their example or start with the file in the test directory of this plugin. Simply make sure the base_url and drupal_root keys are correct.  drupal_root needs to be `/srv/code` (This is the path to the code inside the behat docker container.)
-
-Here is an example behat.yml file.
+Kalabox Behat is configured to use the default file locations of the features (tests) folder and the behat.yml file.  If you don't already have these in your `code` folder, they will be created there for you on `kbox restart`.  You can immediately run the included sample tests by simply using `kbox behat`.  Tests can be added in the `features` folder and committed with your project.
 
 ```yaml
 default:
@@ -110,8 +90,3 @@ Other Resources
 ---------------
 
 * [Mountain climbing advice](https://www.youtube.com/watch?v=tkBVDh7my9Q)
-
-
-todo
----------------
-- try to inject domain name into behat.yml
