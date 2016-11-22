@@ -42,11 +42,10 @@ script:
   #- cp -f "$TRAVIS_BUILD_DIR/test/kalabox.yml" kalabox.yml
   - sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
   - sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
- # - cd plugins/kalabox-plugin-behat
-#  - kbox restart -- -d
+  - kbox restart -- -d
   # Test Behat
-#  - kbox behat -dl
-#  - kbox behat -v
+  - kbox behat -dl
+  - kbox behat -v
 
 
   # Do some cleanup
