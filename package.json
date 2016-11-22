@@ -23,6 +23,7 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-jscs": "~0.8.1",
     "jshint-stylish": "~1.0.0",
-    "matchdep": "^0.3.0"
+    "matchdep": "^0.3.0",
+    "fs-extra": "^1.0.0"
   }
 }
