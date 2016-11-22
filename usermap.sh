@@ -23,5 +23,6 @@ fi
 chmod 777 -R /tmp/behat_gherkin_cache
 
 echo "$KALABOX_UID ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
 # Run the behat command
 su -m "$KALABOX_UID" -c "bin/$(echo $@)"
