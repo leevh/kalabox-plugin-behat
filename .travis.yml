@@ -39,7 +39,7 @@ script:
   - cd viu-behat
   - mkdir -p plugins
   - cp -rfa "$TRAVIS_BUILD_DIR/." plugins/kalabox-plugin-behat
-  - cp -f "$TRAVIS_BUILD_DIR/test/kalabox.yml" kalabox.yml
+#  - cp -f "$TRAVIS_BUILD_DIR/test/kalabox.yml" kalabox.yml
   - sudo cp -f "$TRAVIS_BUILD_DIR/test/behat.yml" code/behat.yml
   - sudo cp -r -f "$TRAVIS_BUILD_DIR/test/features" code/features
   - cd plugins/kalabox-plugin-behat
