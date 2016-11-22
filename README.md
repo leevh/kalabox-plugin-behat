@@ -114,7 +114,4 @@ Other Resources
 
 todo
 ---------------
-- add more to events.js to move the usermap file to config/behat too
-- also for events.js, if no behat.yml is in place, copy sample so docker can mount something.
-- make sure code in events.js executes from anywhere in the app
-- possibly now remove the entrypoint from the image and make it work more as a standalone
+- try to inject domain name into behat.yml
