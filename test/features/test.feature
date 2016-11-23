@@ -1,12 +1,12 @@
 @api
-Feature: Basic VIUpal sample tests
+Feature: Basic Drupal Behat sample tests
   In order to make sure behat testing works
   As a Drupal developer
   I need to be able to write absolute basic tests and have them pass
 
   Scenario: Searching for "user login"
     Given I am an anonymous user
-    Then I should see "User login"
+    Then I should see "Powered by Drupal"
 
   Scenario: Create users
     Given users:
@@ -25,15 +25,13 @@ Feature: Basic VIUpal sample tests
 
   Scenario: Create a term
     Given I am logged in as a user with the "administrator" role
-    When I am viewing a "panopoly_categories" term with the name "My tag"
+    When I am viewing a "tags" term with the name "My tag"
     Then I should see the heading "My tag"
 
-  Scenario: Create many terms
-    Given "panopoly_categories" terms:
-      | name    |
-      | Tag one |
-      | Tag two |
-    And I am logged in as a user with the "administrator" role
-    When I go to "admin/structure/taxonomy/panopoly_categories"
-    Then I should see "Tag one"
-    And I should see "Tag two"
+  Scenario: Create nodes with fields
+    Given "article" content:
+      | title                     | promote | body             |
+      | First article with fields |       1 | PLACEHOLDER BODY |
+    When I am on the homepage
+    And follow "First article with fields"
+    Then I should see the text "PLACEHOLDER BODY"

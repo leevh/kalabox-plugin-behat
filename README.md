@@ -37,38 +37,14 @@ Restart your app. This will download and build any needed Docker images provided
 # Restart the app with debug more on so we can get some extra info
 kbox restart -- -d
 ```
+**Test the plugin**
+
+Simply run `kbox behat` to run the sample tests that are now located in `code/features` folder.
 
 Configuring Behat
 ------------------
 
-Kalabox Behat is configured to use the default file locations of the features (tests) folder and the behat.yml file.  If you don't already have these in your `code` folder, they will be created there for you on `kbox restart`.  You can immediately run the included sample tests by simply using `kbox behat`.  Tests can be added in the `features` folder and committed with your project.
-
-```yaml
-default:
-  suites:
-    default:
-      contexts:
-        - FeatureContext
-        - Drupal\DrupalExtension\Context\DrupalContext
-        - Drupal\DrupalExtension\Context\MinkContext
-        - Drupal\DrupalExtension\Context\MessageContext
-        - Drupal\DrupalExtension\Context\DrushContext
-  extensions:
-    Behat\MinkExtension:
-      goutte: ~
-      selenium2: ~
-      base_url: http://mysite.kbox.host
-    Drupal\DrupalExtension:
-      blackbox: ~
-      api_driver: 'drupal'
-      drupal:
-        drupal_root: '/srv/code'
-
-```
-
-From here you will create *.feature test files in your new features folder following the format shown on the [Drupal Behat Extension](https://behat-drupal-extension.readthedocs.io) docs. Again, you can start with the example file provided in `test/features/test.feature` to see it in action.
-
-By default behat will the tests in this folder by issuing the command `kbox behat` from within your app folder.
+Kalabox Behat is configured to use the default file locations of the `features` (tests) folder and the `behat.yml` file.  If you don't already have these in your root `code` folder, they will be created for you on `kbox restart`.  You can immediately run the included sample tests by simply using `kbox behat`. Some may fail depending on your site, but should pass with default d7/d8.  Tests can be added in the `features` folder and committed with your project. Details on tests can be found on [Drupal Behat Extension](https://behat-drupal-extension.readthedocs.io) docs.
 
 For Developers
 --------------
