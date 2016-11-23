@@ -54,7 +54,7 @@ script:
 cache:
   directories:
   - node_modules
-#notifications:
+notifications:
 #  irc:
 #  - chat.freenode.net#kalabox
   email:
