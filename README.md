@@ -39,7 +39,9 @@ kbox restart -- -d
 ```
 **Test the plugin**
 
-Simply run `kbox behat` to run the sample tests that are now located in `code/features` folder.
+If running a Pantheon app, simply run `kbox behat` to run the sample tests that are now located in `code/features` folder.
+
+**If running a stock drupal 7/8 app**, you will need to edit `code/config/behat/settings.php` with the credentials from `kbox services`.
 
 Configuring Behat
 ------------------
