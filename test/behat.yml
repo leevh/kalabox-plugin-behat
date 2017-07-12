@@ -10,7 +10,8 @@ default:
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      selenium2: ~
+      selenium2:
+        wd_host: "http://grid:24444/wd/hub"
       base_url: http://viu-behat.kbox.host
     Drupal\DrupalExtension:
       blackbox: ~
