@@ -7,7 +7,7 @@
 # for @javascript behat testing
 #
 selenium:
-  image: elgalu/selenium
+  image: elgalu/selenium:latest
   volumes:
     - /dev/shm:/dev/shm
   ports:
