@@ -6,20 +6,7 @@
 # https://github.com/elgalu/docker-selenium
 # for @javascript behat testing
 #
-selenium:
-  image: elgalu/selenium:latest
-  volumes:
-    - /dev/shm:/dev/shm
-  ports:
-    - "4444:24444"
-    - "5900:25900"
-    - "6080:26080"
-  privileged: true
-  stdin_open: true
-  tty: true
-  environment:
-    TZ: "US/Pacific"
-    NOVNC: "true"
+
 
 behat:
   image: leevh/docker-kalabox-behat:latest
