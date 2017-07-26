@@ -21,4 +21,3 @@ behat:
   tty: true
   links:
     - db:database
-    - selenium:grid
